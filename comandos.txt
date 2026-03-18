@@ -1,3 +1,4 @@
-Comandos:
+// Comandos:
 
 tsc nome_do_arquivo.ts cria um arquivo js do arquivo referenciado.
+

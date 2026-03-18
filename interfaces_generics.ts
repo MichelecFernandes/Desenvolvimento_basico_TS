@@ -29,6 +29,8 @@ interface Caixa<T> {
     mostrarConteudo(): T;
 }
 
+// <T> é um parâmetro de tipo genérico que pode ser substituído por qualquer tipo específico quando a interface for implementada. Isso permite que a mesma interface seja usada para diferentes tipos de dados, como números, strings ou objetos, sem perder a segurança de tipo.
+
 // Implementando a interface genérica
 const caixaDeNumero: Caixa<number> = {
     conteudo: 42,
