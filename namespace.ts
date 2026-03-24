@@ -4,7 +4,7 @@ console.log("Uso de namespaces e módulos em TypeScript" );
 
 // Uso de módulos: é uma forma de organizar o código em arquivos separados, onde cada arquivo é um módulo. Os módulos permitem importar e exportar funcionalidades entre arquivos, promovendo a reutilização de código e a modularidade. Eles ajudam a manter o código mais limpo e organizado, facilitando a manutenção e o desenvolvimento em equipe.
 
-namespace MatematicaBascia {
+namespace MatematicaBasica {
     export function somar(a: number, b: number): number {
         return a + b;
     }
@@ -14,8 +14,8 @@ namespace MatematicaBascia {
     }
 }
 
-const resultadoSoma = MatematicaBascia.somar(5, 3);
-const resultadoSubtracao = MatematicaBascia.subtrair(5, 3);
+const resultadoSoma = MatematicaBasica.somar(5, 3);
+const resultadoSubtracao = MatematicaBasica.subtrair(5, 3);
 
 console.log(`Resultado da soma: ${resultadoSoma}`); // Saída: Resultado da soma: 8
 console.log(`Resultado da subtração: ${resultadoSubtracao}`); // Saída: Resultado da subtração: 2
