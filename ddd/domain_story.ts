@@ -37,3 +37,6 @@
 // Relação ou fluxo:
 // Representa a sequência de interação entre atores, objetos e atividades.
 // Exemplo: cliente faz pedido -> sistema registra pedido -> atendente confirma pedido.
+
+// Linguagem ubíqua: é a linguagem comum usada por todas as pessoas envolvidas no negócio, como clientes, especialistas do domínio e desenvolvedores.
+// Ela reúne os termos, expressões e conceitos da regra de negócio, ajudando todos a se comunicarem com clareza e sem ambiguidades.
