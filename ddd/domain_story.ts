@@ -40,3 +40,46 @@
 
 // Linguagem ubíqua: é a linguagem comum usada por todas as pessoas envolvidas no negócio, como clientes, especialistas do domínio e desenvolvedores.
 // Ela reúne os termos, expressões e conceitos da regra de negócio, ajudando todos a se comunicarem com clareza e sem ambiguidades.
+
+
+// ACL - Camada Anti-Corrupção
+
+// Usada para impedir que regras, modelos ou inconsistências de um sistema externo “contaminem” o domínio da sua aplicação.
+// Ideia central: seu sistema tem seu próprio modelo de negócio outro sistema usa nomes, formatos ou regras diferentes a ACL faz a tradução entre os dois lados
+
+// Ex: O sistema externo manda isso:
+const legado = {
+  client_name: "Maria",
+  client_status: "A"
+}
+
+// Mas no seu sistema você quer isso:
+const cliente = {
+  nome: "Maria",
+  ativo: true
+}
+
+// A camada anti-corrupção faz a tradução:
+const legado = {
+  client_name: "Maria",
+  client_status: "A"
+}
+
+function traduzirCliente(dadoExterno: {
+  client_name: string
+  client_status: string
+}) {
+  return {
+    nome: dadoExterno.client_name,
+    ativo: dadoExterno.client_status === "A"
+  }
+}
+
+const cliente = traduzirCliente(legado)
+console.log(cliente)
+
+// Saída:
+{
+  nome: "Maria",
+  ativo: true
+}
